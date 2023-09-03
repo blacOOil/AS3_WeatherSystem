@@ -121,9 +121,12 @@ namespace SuperGame
                 LevelManager.Instance.RestartCurrentLevel();
             }
         }
-        public void WeatherReady()
+        public void WeatherReady(int value)
         {
-            isWeatherSelected = true;
+            if (value > 0)
+            {
+                isWeatherSelected = true;
+            }
         }
     }
 }

@@ -5223,14 +5223,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: e738fdddf11a49428ae7c20678e8c23f, type: 3}
+      - m_Target: {fileID: 2049417089}
         m_TargetAssemblyTypeName: SuperGame.GameManager, Assembly-CSharp
         m_MethodName: WeatherReady
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
