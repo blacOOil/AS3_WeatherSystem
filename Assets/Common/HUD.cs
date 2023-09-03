@@ -12,6 +12,7 @@ namespace SuperGame
         [Header("Status")] [SerializeField] Image lifePointPrefab;
         [SerializeField] List<Image> lifePointList = new List<Image>();
         [SerializeField] TMP_Text levelText;
+       
 
         [Header("Time")] [SerializeField] TMP_Text gameStartCountdownText;
         [SerializeField] Image countdownGaugeImage;
@@ -75,5 +76,6 @@ namespace SuperGame
         {
             levelText.text = "Level : " + level;
         }
+
     }
 }
