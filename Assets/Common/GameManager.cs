@@ -15,22 +15,22 @@ namespace SuperGame
 
         [Header("UI")]
         [SerializeField] HUD hud;
-        [SerializeField] GameObject WeatherSelectionPanel;
+
 
         [Header("BGM")]
         [SerializeField] AudioSource bgm;
         
         bool isPaused;
         bool isGameOver;
-        bool isWeatherSelected = false;
+        
 
         protected override void InitAfterAwake()
         {
-            WeatherSelectionPanel.SetActive(false);
+            
             Pause();
             Reset();
             SetupHUD();
-            
+           
             //StartLevel();
         }
         
@@ -52,27 +52,21 @@ namespace SuperGame
 
         void Update()
         {
+
             if (!isPaused)
                 levelEndTimer.PassTime();
         }
 
         public void StartLevel()
         {
-            if (isWeatherSelected == false)
-            {
-
-                WeatherSelectionPanel.SetActive(true);
-                Pause();
-            }
-            else
-            {
-                WeatherSelectionPanel.SetActive(false);
+           
+                
                 isGameOver = false;
                 levelEndTimer.Start();
                 Resume();
                 LevelManager.Instance.SetLastPlayedLevel();
                 hud.SetGameEndCountdownTime(levelEndTimer.duration, levelEndTimer.duration);
-            }
+            
         }
 
         public void Resume()
@@ -121,12 +115,6 @@ namespace SuperGame
                 LevelManager.Instance.RestartCurrentLevel();
             }
         }
-        public void WeatherReady(int value)
-        {
-            if (value > 0)
-            {
-                isWeatherSelected = true;
-            }
-        }
+       
     }
 }

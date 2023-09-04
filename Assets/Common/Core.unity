@@ -3585,6 +3585,7 @@ GameObject:
   - component: {fileID: 964918919}
   - component: {fileID: 964918921}
   - component: {fileID: 964918920}
+  - component: {fileID: 964918922}
   m_Layer: 5
   m_Name: WeatherUI
   m_TagString: Untagged
@@ -3654,6 +3655,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964918918}
   m_CullTransparentMesh: 1
+--- !u!114 &964918922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964918918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ef46830b7219640b7ab26d796c9f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &975009516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4938,6 +4951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1496373422}
+  - component: {fileID: 1496373423}
   m_Layer: 0
   m_Name: WeatherManager
   m_TagString: Untagged
@@ -4960,6 +4974,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1496373423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496373421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9337e0685da1e3d47a60f1b9b3640525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeatherSelectionPanel: {fileID: 964918918}
 --- !u!1 &1580134003
 GameObject:
   m_ObjectHideFlags: 0
@@ -5140,6 +5167,7 @@ MonoBehaviour:
   difficultyLevel: 1
   difficultyUI: {fileID: 663842208}
   isSelected: 0
+  isWeatherSelected: 0
 --- !u!1 &1608574500
 GameObject:
   m_ObjectHideFlags: 0
@@ -5223,9 +5251,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2049417089}
-        m_TargetAssemblyTypeName: SuperGame.GameManager, Assembly-CSharp
-        m_MethodName: WeatherReady
+      - m_Target: {fileID: 1496373423}
+        m_TargetAssemblyTypeName: SuperGame.WeatherOPtionUI, Assembly-CSharp
+        m_MethodName: WeatherSelected
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6351,7 +6379,6 @@ MonoBehaviour:
   lifeCount: 3
   timeScaleToAdd: 0.25
   hud: {fileID: 213361561}
-  WeatherSelectionPanel: {fileID: 964918918}
   bgm: {fileID: 2049417092}
 --- !u!4 &2049417091
 Transform:

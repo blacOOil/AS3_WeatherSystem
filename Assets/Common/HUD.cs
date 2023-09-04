@@ -24,6 +24,8 @@ namespace SuperGame
         [SerializeField] Button restartButton;
         [SerializeField] Button nextLevel;
 
+        
+
         public event Action OnRestart;
         public event Action OnNext;
 

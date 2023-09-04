@@ -11,10 +11,12 @@ namespace SuperGame
         [SerializeField] GameObject difficultyUI;
 
         public bool isSelected = false;
-        
+        public bool isWeatherSelected = false;
+
         protected override void InitAfterAwake()
         {
             difficultyUI.SetActive(true);
+            
         }
 
         public void SelectDifficultyLevel(int value)
@@ -22,17 +24,21 @@ namespace SuperGame
             difficultyLevel = value;
             difficultyUI.SetActive(false);
             isSelected = true;
-            GameManager.Instance.StartLevel();
-            
-           
-
-        }
-        private void Update()
-        {
-            if(isSelected == true)
+            if (isWeatherSelected == false)
             {
+                WeatherOPtionUI.Instance.WeatherSelectioning();
                 
             }
+            else
+            {
+                GameManager.Instance.StartLevel();
+            }
         }
+        public void WeatherOkay()
+        {
+            isWeatherSelected = true;
+            
+        }
+      
     }
 }

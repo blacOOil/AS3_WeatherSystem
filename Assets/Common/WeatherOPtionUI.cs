@@ -9,10 +9,7 @@ namespace SuperGame
 {
     public class WeatherOPtionUI : Singleton<WeatherOPtionUI>
     {
-        SuperGame.DifficultyManager difficultyManager = new DifficultyManager();
-        [SerializeField] GameObject WeatherSelectionPanel;
-
-      
+        [SerializeField] GameObject WeatherSelectionPanel;  
         protected override void InitAfterAwake()
         {
             WeatherSelectionPanel.SetActive(false);
@@ -26,9 +23,18 @@ namespace SuperGame
             }
 
         }
-        public void NotifyOnDifficultySelection()
+        public void WeatherSelectioning()
         {
             WeatherSelectionPanel.SetActive(true);
+
         }
+        public void WeatherSelected(int value)
+        {
+            if (value > 0)
+            {
+                WeatherSelectionPanel.SetActive(false);
+            }
+        }
+
     }
 }
