@@ -9,7 +9,7 @@ namespace SuperGame
 {
     public class WeatherOPtionUI : Singleton<WeatherOPtionUI>
     {
-        [SerializeField] GameObject WeatherSelectionPanel;  
+        [SerializeField] GameObject WeatherSelectionPanel;
         protected override void InitAfterAwake()
         {
             WeatherSelectionPanel.SetActive(false);
