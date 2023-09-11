@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class WeatherDay : MonoBehaviour
 {
-    public Light light;
     public static bool GameObjectDayLight = false;
     public GameObject DayLight;
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
         if (GameObjectDayLight == true) {
             DayLightButtonTrue();
         } else {
