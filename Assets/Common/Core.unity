@@ -219,6 +219,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1858554478}
+        m_TargetAssemblyTypeName: RainController2, Assembly-CSharp
+        m_MethodName: RainButtonFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4908200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5794,7 +5806,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1028430044}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1858554478}
+        m_TargetAssemblyTypeName: RainController2, Assembly-CSharp
+        m_MethodName: RainButtonTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1134395901}
+        m_TargetAssemblyTypeName: SnowController, Assembly-CSharp
+        m_MethodName: SnowButtonFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1028430044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7414,6 +7450,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1134395900}
+  - {fileID: 1858554477}
   m_Father: {fileID: 1496373422}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7763,6 +7800,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790279097}
   m_CullTransparentMesh: 1
+--- !u!1 &1858554476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1858554477}
+  - component: {fileID: 1858554478}
+  m_Layer: 0
+  m_Name: Rain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1858554477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858554476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2019550673}
+  m_Father: {fileID: 1641953685}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858554478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858554476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2f738c21cf57041b5247caa9646e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RainGroup: {fileID: 2019550672}
 --- !u!1 &1861534044
 GameObject:
   m_ObjectHideFlags: 0
@@ -9171,6 +9254,16 @@ MonoBehaviour:
   - {x: 0.4157348, y: -0.27778515, z: 0}
   - {x: 0.46193978, y: -0.19134171, z: 0}
   - {x: 0.49039266, y: -0.09754512, z: 0}
+--- !u!1 &2019550672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3636636283090318966, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+  m_PrefabInstance: {fileID: 2739046751529464251}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2019550673 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+  m_PrefabInstance: {fileID: 2739046751529464251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2049417089
 GameObject:
   m_ObjectHideFlags: 0
@@ -9415,6 +9508,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1858554478}
+        m_TargetAssemblyTypeName: RainController2, Assembly-CSharp
+        m_MethodName: RainButtonFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2144990120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9510,3 +9615,108 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803c3d8df5da37f4d9fae922a4bbc7e1, type: 3}
+--- !u!1001 &2739046751529464251
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1858554477}
+    m_Modifications:
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: SizeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5473522
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.37169808
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.92245483
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.36486816
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0.6486492
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 0.2582261
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0.2609654
+      objectReference: {fileID: 0}
+    - target: {fileID: 827652012100686325, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 0.2582261
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -223.97017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -112.84821
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.7442765
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397022349927512831, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636636283090318966, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
+      propertyPath: m_Name
+      value: RainParticle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2906dd22fffbdb64493a71f88516482f, type: 3}
