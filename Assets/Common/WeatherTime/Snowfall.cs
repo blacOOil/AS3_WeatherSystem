@@ -5,10 +5,15 @@ using UnityEngine;
 public class Snowfall : MonoBehaviour {
     //public GameObject snowflakePrefab;
     public GameObject snowflakeShapePrefab;
+    private float SnowAmount = 1f;
+    public void OnSliderChanged(float value)
+    {
+        SnowAmount -= value;
 
+    }
     void Start() {
         //InvokeRepeating("SpawnSnowflake", 0f, 0.5f);
-        InvokeRepeating("SpawnSnowflakeShape", 0f, 0.5f);
+        InvokeRepeating("SpawnSnowflakeShape", 0f, SnowAmount);
     }
 
     void SpawnSnowflakeShape() {
