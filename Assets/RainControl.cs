@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RainControl : MonoBehaviour
 {
-    public ParticleSystem rainParticleSystem;
+    
     public Slider rainSlider;
     public AudioSource rainSound; // เสียงฝน
     public AudioSource thunderSound; // เสียงฟ้าร้อง
@@ -14,8 +14,7 @@ public class RainControl : MonoBehaviour
 
     private void Start()
     {
-        // Get the Particle System's Emission module
-        emissionModule = rainParticleSystem.emission;
+
 
         // Add a listener to the slider's value change event
         rainSlider.onValueChanged.AddListener(AdjustRainIntensity);

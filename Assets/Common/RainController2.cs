@@ -5,9 +5,10 @@ using UnityEngine;
 public class RainController2 : MonoBehaviour
 {
     public static bool GameObjectRainSet = false;
-    public GameObject RainGroup;
+    public GameObject RainGroup,RainSound;
     public GameObject Rain1;
     public GameObject Rain2;
+    
   
 
      void Start()
@@ -15,6 +16,7 @@ public class RainController2 : MonoBehaviour
         RainGroup.SetActive(false);
         Rain1.SetActive(false);
         Rain2.SetActive(false);
+        RainSound.SetActive(false);
     }
     void Update()
     {
@@ -34,12 +36,14 @@ public class RainController2 : MonoBehaviour
         
         RainGroup.SetActive(true);
         GameObjectRainSet = true;
+        RainSound.SetActive(true);
     }
     public void RainButtonFalse()
     {
         
         RainGroup.SetActive(false);
         GameObjectRainSet = false;
+        RainSound.SetActive(false);
 
     }
     public void OnSliderChanged(float value)
